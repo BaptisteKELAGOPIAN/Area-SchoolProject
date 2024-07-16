@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext");
+
+.popup-text{
+    font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.popup, .popup2, .popup3, .popup4 {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hiden;
+    transition: 0.64s ease-in-out;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .popup{
+    left: -460px;
+    top: -235px;
+    width: 70vw;
+    height: 100vh;
+  }
+  .popup2{
+    left: -460px;
+    top: -100px;
+    width: 70vw;
+    height: 67vh;
+  }
+  .popup3{
+    left: -460px;
+    top: -184px;
+    width: 70vw;
+    height: 87vh;
+  }
+  .popup4{
+    left: -460px;
+    top: -184px;
+    width: 70vw;
+    height: 87vh;
+  }
+
+  .popup .popup-inner, .popup2  .popup2-inner, .popup3 .popup3-inner, .popup4 .popup4-inner {
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    max-height: 600px;
+    width: 55%;
+    height: 44%;
+    background-color: #fff;
+    transform: rotate(32deg);
+    transition: 0.64s ease-in-out;
+    justify-content: center;
+  }
+
+  .popup__photo, .popup2__photo, .popup3__photo, .popup4__photo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .popup__photo img, .popup2__photo img, .popup3__photo img, .popup4__photo img {
+    width: auto;
+    height: 100%;
+  }
+  .popup__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    padding: 4rem;
+  }
+  .popup:target, .popup2:target, .popup3:target, .popup4:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup:target .popup-inner, .popup2:target .popup2-inner, .popup3:target .popup3-inner, .popup4:target .popup4-inner {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0);
+  }
+  .popup__close, .popup2__close, .popup3__close, .popup4__close {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    border-radius: 100%;
+    background-color: #0A0A0A;
+    z-index: 4;
+    color: #fff;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
